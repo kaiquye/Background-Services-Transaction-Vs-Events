@@ -1,15 +1,13 @@
 import { Router } from 'express';
-import { OrderController } from '../controllers/orderController';
 import { CheckoutOrderRequestDto } from '../controllers/dtos/checkoutOrderDto';
 import { DtoValidator } from '../validators/dtoValidator';
+import { register } from '../../../structure/register';
 
-const orderController = new OrderController();
 const orderRouter = Router();
+const orderController = register.getInstance('order-controller');
 
-orderRouter.post(
-  '/order',
-  DtoValidator(CheckoutOrderRequestDto),
-  orderController.CheckoutOrder
+orderRouter.post('/order', DtoValidator(CheckoutOrderRequestDto), (req, res) =>
+  orderController.checkoutOrder(req, res)
 );
 
 export default orderRouter;

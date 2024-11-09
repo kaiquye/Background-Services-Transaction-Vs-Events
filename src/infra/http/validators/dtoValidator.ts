@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { ObjectSchema } from 'yup';
-import { ApiResponse } from '../../../structure/ApiResponse';
+import { ApiResponse } from '../../../structure/apiResponse';
 
 export function DtoValidator<DtoType extends ObjectSchema<unknown>>(
   dto: DtoType

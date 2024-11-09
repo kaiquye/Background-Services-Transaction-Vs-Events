@@ -1,5 +1,9 @@
-import express from 'express'
+import express from 'express';
+import orderRouter from './routes/orderRoutes';
 
-const server = express()
+const server = express();
 
-export default server
+server.use(express.json());
+server.use('/v1', orderRouter);
+
+export default server;

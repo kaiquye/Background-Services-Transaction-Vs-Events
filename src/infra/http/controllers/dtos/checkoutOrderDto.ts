@@ -1,5 +1,17 @@
 import { object, string, array, number } from 'yup';
 
+export type ICheckoutOrderRequestDto = {
+  card: {
+    number: string;
+    cvv: string;
+    brand: string;
+  };
+  items: Array<{
+    id: number;
+    quantity: number;
+  }>;
+};
+
 export const CheckoutOrderRequestDto = object({
   card: object({
     number: string().required(),

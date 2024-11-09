@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { ApiResponse } from '../../../structure/ApiResponse';
+import { ApiResponse } from '../../../structure/apiResponse';
 
 export const errorHandler = () => {
   return (error, req: Request, res: Response, next: NextFunction) => {
