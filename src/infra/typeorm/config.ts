@@ -1,10 +1,8 @@
 import { DataSource } from 'typeorm';
-import OrderModel from '../../domain/order/OrderModel';
 import ItemModel from '../../domain/item/ItemModel';
+import OrderModel from '../../domain/order/orderModel';
 
-let AppDataSource = null;
-
-AppDataSource = new DataSource({
+export const dataSource = new DataSource({
   type: 'postgres',
   host: 'localhost',
   port: 5432,
@@ -15,5 +13,3 @@ AppDataSource = new DataSource({
   synchronize: true,
   logging: false
 });
-
-export default AppDataSource;

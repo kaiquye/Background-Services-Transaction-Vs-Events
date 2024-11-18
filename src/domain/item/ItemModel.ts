@@ -1,5 +1,5 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import OrderModel from '../order/OrderModel';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import OrderModel from '../order/orderModel';
 
 @Entity({
   name: 'item'
@@ -17,6 +17,8 @@ export default class ItemModel {
   @Column({ type: 'int', nullable: false })
   public amount: number;
 
-  @ManyToOne(() => OrderModel, (orderModel) => orderModel.items)
-  public order: OrderModel;
+  @Column({ type: 'int', nullable: false })
+  public quantity: number;
+
+  public order: Array<OrderModel>;
 }

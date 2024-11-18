@@ -10,7 +10,7 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "outDir": "dist",
     "declaration": true,
   },

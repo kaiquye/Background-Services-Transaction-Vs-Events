@@ -1,13 +1,16 @@
 import 'reflect-metadata';
 import './structure/container';
-import appDataSource from './infra/typeorm/config';
-import server from './infra/http/server';
+import server from './infra/server';
+import { dataSource } from './infra/typeorm/config';
 
-appDataSource
-  .initialize()
-  .then(() => {
-    server.listen(8080, () => console.log('start server...'));
-  })
-  .catch((er) => console.log('database error:' + er));
+const bootstrap = async () => {
+  dataSource
+    .initialize()
+    .then(() => {
+      server.listen(8082, () => console.log('start server...'));
+    })
+    .catch((er) => console.log('database error:' + er));
+};
 
-export default server;
+bootstrap();
+export default bootstrap;

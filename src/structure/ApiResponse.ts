@@ -33,6 +33,10 @@ export class ApiResponse<T> {
     return new ApiResponse<T>(403, message, null);
   }
 
+  public static CONFLICT<T>(message?: string): ApiResponse<T> {
+    return new ApiResponse<T>(409, message, null);
+  }
+
   public static UNPROCESSABLE_ENTITY<T>(message?: string): ApiResponse<T> {
     return new ApiResponse<T>(422, message, null);
   }

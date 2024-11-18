@@ -10,6 +10,12 @@ export class OrderRepository implements IOrderRepository {
     this.db = dataSource.getRepository(OrderModel);
   }
 
+  async findById(orderId: number): Promise<OrderModel> {
+    return await this.db.findOneBy({
+      id: orderId
+    });
+  }
+
   async save(order: OrderModel): Promise<OrderModel> {
     const newOrder = this.db.create(order);
     return await this.db.save(newOrder);
