@@ -1,3 +1,5 @@
+import { EventQueue } from '../infra/queue/event.queue';
+
 class Register {
   private instances;
 
@@ -18,6 +20,10 @@ class Register {
     console.warn('get instancse:', nameOfClass);
     if (!this.instances[nameOfClass]) {
       return null;
+    }
+
+    if (this.instances[nameOfClass] instanceof EventQueue) {
+      return this.instances[nameOfClass];
     }
 
     return new this.instances[nameOfClass]();
