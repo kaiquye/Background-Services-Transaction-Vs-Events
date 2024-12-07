@@ -1,1 +1,1 @@
-# Building Background Services with Node.js 
+Transaction vs Events: Designing Background Services for Checkout and Order Processing
