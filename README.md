@@ -17,8 +17,7 @@ Ao finalizar uma compra, diversas operações precisam ocorrer, como validação
    - Reduz o tempo de resposta do checkout, mas exige controle de falhas e garantias de entrega.  
 
 3️⃣ **Orquestração de Eventos e Padrão Saga**  
-   - Para fluxos mais complexos, é possível usar padrões como Saga, garantindo a execução coordenada das etapas do processo.  
-   - Permite compensação em caso de falhas, tornando o fluxo mais resiliente.  
+   - Para fluxos mais complexos, é possível usar padrões como Saga, ga´[
 
 4️⃣ **Cron Jobs**  
    - Não se encaixa no caso do projeto
@@ -26,3 +25,4 @@ Ao finalizar uma compra, diversas operações precisam ocorrer, como validação
 
 📌 Padrões utilizandos
 - *Register*: para injeção e inversão de dependencia
+- -D
