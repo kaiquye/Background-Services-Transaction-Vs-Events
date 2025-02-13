@@ -22,3 +22,7 @@ Ao finalizar uma compra, diversas operações precisam ocorrer, como validação
 
 4️⃣ **Cron Jobs**  
    - Não se encaixa no caso do projeto
+
+
+📌 Padrões utilizandos
+- *Register*: para injeção e inversão de dependencia
