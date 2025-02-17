@@ -2,7 +2,7 @@
 ### Estratégias para Execução de Processos em Segundo Plano no Checkout de um E-commerce  
 
 ## 📌 Objetivo  
-Este projeto de estudo explora diferentes formas de processar funções em segundo plano no contexto de um checkout de e-commerce, comparando abordagens síncronas e assíncronas.  
+Este projeto mostra formas de processar funções em segundo plano no contexto de um checkout de e-commerce, comparando abordagens síncronas e assíncronas.  
 
 ## 🚀 Caso de Uso: Checkout de Compras  
 Ao finalizar uma compra, diversas operações precisam ocorrer, como validação de estoque, processamento de pagamento e emissão da nota fiscal. Essas operações podem ser executadas de diferentes maneiras.
